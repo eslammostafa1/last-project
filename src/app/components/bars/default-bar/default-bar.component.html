@@ -1,0 +1,41 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">blog</a>
+
+        <div class="navbar-nav">
+          <a class="nav-link active"  routerLink="/">Home</a>
+          <a class="nav-link" routerLink="/signin">signin</a>
+          <a class="nav-link" routerLink="/signup">signup</a>
+          <a class="nav-link" routerLink="/signout">signout</a>
+        </div>
+
+      </div>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <ul class="navbar-nav">
+          <li *ngIf="isLoggedIn" class="nav-item" >
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li *ngIf="!isLoggedIn" class="nav-item">
+            <a class="nav-link" routerLink="/signin">signin</a>
+          </li>
+          <li *ngIf="!isLoggedIn" class="nav-item">
+            <a class="nav-link" routerLink="/signup">signup</a>
+          </li>
+          <li *ngIf="isLoggedIn" class="nav-item">
+            <a class="nav-link " routerLink="/signout">signout</a>
+          </li>
+        </ul>
+      </div>
+    
+  </nav>

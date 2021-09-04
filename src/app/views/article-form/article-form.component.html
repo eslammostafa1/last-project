@@ -1,0 +1,18 @@
+<p>article-form works!</p>
+<div class=" d-flex justify-content-center">
+    <div style="width:50%">
+        <h1> {{ editMode ?' update New Article' :' Create New Article'}}</h1>
+        <hr>
+        <div class="mb-3" >
+            <label for="title" class="form-label">Title</label>
+            <input [(ngModel)]="title"  type="email" class="form-control" id="title" placeholder="title of article">
+       </div>
+    <div class="mb-3" >
+        <label for="content" class="form-label">Content</label>
+        <textarea [(ngModel)]="content"  type="Content" class="form-control" id="Content"  placeholder="Content of article" rows="3"></textarea>
+   </div>  
+   <div class="d-flex justify-content-center">
+        <button (click)="submit()" class="btn btn-primary"> Submit </button>
+   </div>    
+    </div>
+</div>
